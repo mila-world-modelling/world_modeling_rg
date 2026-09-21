@@ -14,8 +14,8 @@ disableKinds = ["taxonomy", "term", "RSS"]
   footer = "Mila World Modelling Reading Group"
 
   # Practical details shown under the intro. Leave any of these blank ("") to hide.
-  when = "Fridays, 11:00–12:00 (ET)"
-  where = "Mila, Auditorium 1 — and on Zoom"
+  when = "Thursday, 3:00–4:00 pm (ET)"
+  where = "Mila, Auditorium 2 — and on Zoom"
   # Heading for the schedule section. "Schedule", "Talks", "Past sessions"...
   sessionsHeading = "Schedule"
 
