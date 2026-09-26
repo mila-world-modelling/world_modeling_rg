@@ -1,21 +1,21 @@
 # The deploy workflow passes the real URL at build time, so "/" is fine here
 # and keeps `hugo server` clean. Change it if you build by hand.
 baseURL = "/"
-title = "Mila World Modelling Reading Group"
+title = "World Models Reading Group"
 
 # One page — no tags/categories pages needed.
 disableKinds = ["taxonomy", "term", "RSS"]
 
 [params]
   # Shown in the header and footer
-  author = "Mila World Modelling Reading Group"
-  short = "Mila World Modelling RG"
-  description = "The Mila World Modelling Reading Group meets weekly at Mila to discuss recent work on world models."
-  footer = "Mila World Modelling Reading Group"
+  author = "World Models Reading Group"
+  short = "World Models RG"
+  description = "The World Models Reading Group meets weekly at Mila to discuss recent work on world models."
+  footer = "World Models Reading Group"
 
   # Practical details shown under the intro. Leave any of these blank ("") to hide.
   when = "Thursday, 3:00–4:00 pm (ET)"
-  where = "Mila, Auditorium 2 — and on Zoom"
+  where = 'Mila, Auditorium 2 — and on <a href="https://mcgill.zoom.us/j/88388571288?pwd=Enyi4Plc3MXm5PNCT5wXGfxHdx9ekR.1">Zoom</a>'
   # Heading for the schedule section. "Schedule", "Talks", "Past sessions"...
   sessionsHeading = "Schedule"
 

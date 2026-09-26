@@ -1,6 +1,6 @@
 ---
 title: "Get in touch"
-description: "Join the mailing list, propose a paper, or sign up to present at the World Modelling Reading Group."
+description: "Join the mailing list, propose a paper, or sign up to present at the World Models Reading Group."
 form: true
 ---
 
