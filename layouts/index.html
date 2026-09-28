@@ -22,19 +22,33 @@
             {{ if .upcoming }}<span class="badge">Upcoming</span>{{ end }}
           </div>
           <div class="session__body">
-            <p class="session__paper">
-              {{ $href := "" }}{{ with .links }}{{ $href = .paper }}{{ end }}
-              {{ if $href }}<a href="{{ $href }}">{{ .paper | safeHTML }}</a>{{ else }}{{ .paper | safeHTML }}{{ end }}
-            </p>
-            {{ with .presenter }}<p class="session__presenter">Presented by {{ . | safeHTML }}</p>{{ end }}
-            {{ with .note }}<p class="session__note">{{ . | safeHTML }}</p>{{ end }}
-            {{ if .links }}
-            <p class="session__links">
-              {{ with .links.paper }}<a href="{{ . }}">Paper</a>{{ end }}
-              {{ with .links.video }}<a href="{{ . }}">Recording</a>{{ end }}
-              {{ with .links.slides }}<a href="{{ . }}">Slides</a>{{ end }}
-              {{ with .links.code }}<a href="{{ . }}">Code</a>{{ end }}
-            </p>
+            {{ $hasDetails := or .abstract .bio .note .links }}
+            {{ if $hasDetails }}<details class="session__details">{{ end }}
+              {{ if $hasDetails }}<summary class="session__summary">{{ else }}<div class="session__summary session__summary--static">{{ end }}
+                <span class="session__paper">{{ .paper | safeHTML }}</span>
+                {{ with .presenter }}<span class="session__presenter">{{ . | safeHTML }}</span>{{ end }}
+              {{ if $hasDetails }}</summary>{{ else }}</div>{{ end }}
+              {{ if $hasDetails }}
+              <div class="session__expanded">
+                {{ with .note }}<p class="session__note">{{ . | safeHTML }}</p>{{ end }}
+                {{ with .abstract }}
+                <h3>Abstract</h3>
+                <div class="session__copy">{{ . | markdownify }}</div>
+                {{ end }}
+                {{ with .bio }}
+                <h3>Bio</h3>
+                <div class="session__copy">{{ . | markdownify }}</div>
+                {{ end }}
+                {{ if .links }}
+                <p class="session__links">
+                  {{ with .links.paper }}<a href="{{ . }}">Paper</a>{{ end }}
+                  {{ with .links.video }}<a href="{{ . }}">Recording</a>{{ end }}
+                  {{ with .links.slides }}<a href="{{ . }}">Slides</a>{{ end }}
+                  {{ with .links.code }}<a href="{{ . }}">Code</a>{{ end }}
+                </p>
+                {{ end }}
+              </div>
+            </details>
             {{ end }}
           </div>
         </li>
