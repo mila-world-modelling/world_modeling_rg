@@ -13,3 +13,8 @@
 #     video: "https://youtu.be/..."     # optional recording
 #     slides: "https://..."             # optional
 #     code: "https://github.com/..."    # optional
+
+- date: "Oct 1, 2026 · 3:00 pm ET"
+  presenter: "Michael Rabbat"
+  paper: "Title TBA"
+  upcoming: true
