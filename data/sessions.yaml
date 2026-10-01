@@ -9,12 +9,18 @@
 #   note: "Optional one-line comment, e.g. a theme or a second paper."
 #   abstract: "Optional talk abstract."
 #   bio: "Optional presenter biography."
-#   upcoming: true          # adds an "Upcoming" badge; remove once it has happened
+#   status: "Upcoming"      # badge next to the date: "Upcoming", "Past", "Today"...
+#                           # (the older `upcoming: true` still means "Upcoming")
 #   links:
 #     paper: "https://arxiv.org/abs/..."
 #     video: "https://youtu.be/..."     # optional recording
 #     slides: "https://..."             # optional
 #     code: "https://github.com/..."    # optional
+
+- date: "Thursday, October 15, 2026 · 3:00 pm ET"
+  presenter: "TBD"
+  paper: "TBD"
+  status: "Upcoming"
 
 - date: "Thursday, October 1, 2026 · 3:00 pm ET"
   presenter: "Michael Rabbat"
@@ -23,4 +29,4 @@
     This talk provides an overview and motivation for why world models are a necessary component of future AI systems. The term “world model” is overloaded in the broader discourse. For the purposes of this talk I’ll argue that a world model should: (a) construct an agent’s internal representation of the world through perception, and (b) should be able to predict the evolution of this representation through time, including in response to the agent’s actions. Such a world model enables planning. Two main research questions are then: *how to learn such a world model from data?* and *how to use it for planning and control?* I’ll give an overview of our work on Joint-Embedding Predictive Architectures (JEPAs) and will discuss interesting directions for future work.
   bio: >-
     Michael Rabbat is Co-founder and VP World Models at Advanced Machine Intelligence (AMI Labs), where he is building a new breed of AI systems focused on understanding and reasoning about the world. He is also an Associate Industry Member at Mila. Previously, Michael was a Research Director at Meta, where he was a founding member of FAIR Montréal, contributing to the company’s fundamental AI research efforts. Prior to that, he spent over a decade as a professor at McGill University in Electrical and Computer Engineering. He earned his PhD from the University of Wisconsin, Madison. Throughout his career he has worked on a variety of topics across signal processing, learning, and optimization, including distributed optimization and federated learning. His current research is focused on methods for training world models and using them for planning and control.
-  upcoming: true
+  status: "Past"

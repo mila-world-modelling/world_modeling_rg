@@ -119,6 +119,7 @@ h2 {
   letter-spacing: 0.02em;
   text-transform: uppercase;
 }
+.badge--past { color: var(--muted); background: transparent; }
 
 .session__body { flex: 1 1 auto; min-width: 0; }
 .session__summary {
@@ -211,6 +212,17 @@ h2 {
   .organizers { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem 1rem; }
   .organizer__photo { width: 88px; height: 88px; }
 }
+
+/* ----------  Sponsors  ---------- */
+.sponsors { list-style: none; padding: 0; margin: 0; }
+.sponsor { margin: 0 0 1.5rem; }
+.sponsor:last-child { margin-bottom: 0; }
+.sponsor__mark { margin: 0 0 0.6rem; font-weight: 600; }
+.sponsor__mark a { display: inline-flex; align-items: center; gap: 0.7rem; color: var(--text); }
+.sponsor__mark a:hover { text-decoration: none; }
+.sponsor__mark a:hover .sponsor__name { text-decoration: underline; }
+.sponsor__logo { display: block; height: 24px; width: auto; }
+.sponsor__note { margin: 0; color: var(--muted); }
 
 /* ----------  Get in touch  ---------- */
 .contact__lede { margin: 0 0 1.1rem; }

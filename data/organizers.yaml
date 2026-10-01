@@ -36,7 +36,7 @@
   photo: "thuy"
 
 - name: "Roger Girgis"
-  affiliation: "Mila, Polytechnique Montréal"
+  affiliation: "Torc Robotics"
   url: "https://mila.quebec/en/directory/roger-girgis"
 
 - name: "Xiaofeng Zhang"
@@ -46,3 +46,7 @@
 - name: "Yipeng Zhang"
   affiliation: "Mila, Université de Montréal"
   url: "https://mila.quebec/en/directory/yipeng-zhang"
+
+- name: "Max Green"
+  affiliation: "Mila"
+  url: "https://mila.quebec/en/directory/max-green"

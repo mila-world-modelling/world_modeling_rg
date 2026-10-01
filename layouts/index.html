@@ -16,10 +16,11 @@
     {{ with hugo.Data.sessions }}
     <ul class="sessions">
       {{ range . }}
-        <li class="session{{ if .upcoming }} is-upcoming{{ end }}">
+        {{ $status := .status | default (cond (eq .upcoming true) "Upcoming" "") }}
+        <li class="session{{ with $status }} is-{{ . | urlize }}{{ end }}">
           <div class="session__date">
             {{ .date }}
-            {{ if .upcoming }}<span class="badge">Upcoming</span>{{ end }}
+            {{ with $status }}<span class="badge badge--{{ . | urlize }}">{{ . }}</span>{{ end }}
           </div>
           <div class="session__body">
             {{ $hasDetails := or .abstract .bio .note .links }}
@@ -79,6 +80,32 @@
             {{ if .url }}<a href="{{ .url }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}
           </p>
           {{ with .affiliation }}<p class="organizer__affil">{{ . }}</p>{{ end }}
+        </li>
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }}
+
+  {{ with hugo.Data.sponsors }}
+  <section id="sponsors">
+    <h2>Sponsors</h2>
+    <ul class="sponsors">
+      {{ range . }}
+        <li class="sponsor">
+          {{ $slug := .logo | default (lower (replace .name " " "")) }}
+          {{ $logo := "" }}
+          {{ with resources.GetMatch (printf "images/sponsors/%s.*" $slug) }}
+            {{ $src := . }}
+            {{ if ne .MediaType.SubType "svg" }}{{ $src = .Resize "x48" }}{{ end }}
+            {{ $logo = $src.RelPermalink }}
+          {{ end }}
+          <p class="sponsor__mark">
+            {{ if .url }}<a href="{{ .url }}">{{ end }}
+            {{ with $logo }}<img class="sponsor__logo" src="{{ . }}" alt="" height="24">{{ end }}
+            <span class="sponsor__name">{{ .name }}</span>
+            {{ if .url }}</a>{{ end }}
+          </p>
+          {{ with .note }}<p class="sponsor__note">{{ . | safeHTML }}</p>{{ end }}
         </li>
       {{ end }}
     </ul>

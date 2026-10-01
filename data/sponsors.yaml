@@ -1,0 +1,13 @@
+# Sponsors shown above "Get in touch", in this order. Remove every entry to
+# hide the section.
+#
+# `name` is required. `url` links the logo. `note` is the thank-you line.
+#
+# Logos are picked up from assets/images/sponsors/ by lowercased name with
+# spaces removed (torcrobotics.png, .svg, .jpg...), shown next to the name. Add `logo: "othername"` to
+# use a different file name. Without a logo the name is shown as text.
+
+- name: "Torc Robotics"
+  url: "https://torc.ai/"
+  logo: "torc"
+  note: "We kindly thank Torc Robotics for sponsoring the snacks and coffee provided at our RG sessions."
