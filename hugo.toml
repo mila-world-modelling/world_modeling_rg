@@ -10,7 +10,7 @@ disableKinds = ["taxonomy", "term", "RSS"]
   # Shown in the header and footer
   author = "World Models Reading Group"
   short = "World Models RG"
-  description = "The World Models Reading Group meets weekly at Mila to discuss recent work on world models."
+  description = "The World Models Reading Group meets biweekly at Mila to discuss recent work on world models."
   footer = "World Models Reading Group"
 
   # Practical details shown under the intro. Leave any of these blank ("") to hide.

@@ -1,6 +1,6 @@
 # World Models Reading Group
 
-The World Models Reading Group meets weekly at [Mila](https://mila.quebec/) to discuss
+The World Models Reading Group meets biweekly at [Mila](https://mila.quebec/) to discuss
 recent work on world models.
 
 **Website:** https://mila-world-models.github.io/
